@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Louis mon petit Xiao Bao</title>
+    <meta name="description" content="Will you be my valentine?">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16">
+    <meta name="next-size-adjust">
+    <link rel="preload" href="/_next/static/media/c9a5bc6a7c948fb0-s.p.woff2" as="font" crossorigin="" type="font/woff2">
+    <link rel="preload" as="image" href="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif">
+    <link rel="stylesheet" href="/_next/static/css/554796c3191cdae8.css" crossorigin="" data-precedence="next">
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .gif-image {
+            width: 50%;
+        }
+
+        .btn-yes,
+        .btn-no {
+            font-size: 20px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-yes {
+            background-color: #a3ffb4;
+            color: #333;
+        }
+
+        .btn-no {
+            background-color: #ff9ea3;
+            color: #333;
+        }
+
+        .btn-yes:hover {
+            background-color: #72e57d;
+            transform: scale(1.1); /* Augmentation de la taille au survol */
+        }
+
+        .btn-no:hover {
+            background-color: #ff6b75;
+        }
+    </style>
+</head>
+
+<body class="__className_e66fe9">
+    <div class="content">
+        <img class="gif-image" src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif">
+        <h1 class="text-4xl my-4">Will you be my Valentine?</h1>
+        <div class="flex flex-wrap flex-col md:flex-row gap-4 items-center justify-center">
+            <button class="btn-yes" id="yesBtn">Yes</button>
+            <button class="btn-no" id="noBtn">No</button>
+        </div>
+    </div>
+
+    <script src="/_next/static/chunks/webpack-7086a7543d1dc029.js" crossorigin="" async=""></script>
+    <script>
+        (self.__next_f = self.__next_f || []).push([0]);
+        self.__next_f.push([2, null])
+    </script>
+    <script>
+        const yesBtn = document.getElementById('yesBtn');
+        const noBtn = document.getElementById('noBtn');
+        const noMessages = [
+            "are you sure?",
+            "really sure?",
+            "Are you positive???",
+            "Xiao Bao pls !",
+            "Say Yes or I'll kill you",
+            "Just think about it",
+            "if you say no, I'll be very sad",
+            "I'll be very very very sad",
+            "yo bro seriously? say YES !",
+            "Ok fine, I'll stop asking :'(",
+            "Just kidding, PLEASE SAY YES :3 !",
+            "You're breaking my heart :'("
+        ];
+        let messageIndex = 0;
+
+        noBtn.addEventListener('click', function() {
+            noBtn.innerText = noMessages[messageIndex];
+            messageIndex = (messageIndex + 1) % noMessages.length;
+            
+            // Augmenter la taille du bouton "Yes"
+            const fontSize = parseInt(window.getComputedStyle(yesBtn).fontSize);
+            yesBtn.style.fontSize = (fontSize + 20) + 'px';
+        });
+
+        yesBtn.addEventListener('click', function() {
+            window.location.href = 'yes.html';
+        });
+    </script>
+</body>
+
+</html>
